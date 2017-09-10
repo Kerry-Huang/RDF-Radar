@@ -12,7 +12,7 @@ class MainWindow(QtGui.QWidget):
 		
     def keyPressEvent(self, e):
         if e.key() == QtCore.Qt.Key_E:
-            myapp.ui.screen.setPixmap(QtGui.QPixmap("./1.jpg").scaled(240,240))
+            myapp.ui.screen.setPixmap(QtGui.QPixmap("./screen.jpg").scaled(240,240))
 			
 	
 if __name__ == "__main__":
@@ -23,8 +23,8 @@ if __name__ == "__main__":
     pe = QtGui.QPalette()
     pe.setColor(QtGui.QPalette.WindowText,QtCore.Qt.white)
     myapp.ui.label_2.setPalette(pe)
-    myapp.ui.screen.setPixmap(QtGui.QPixmap("./1.jpg").scaled(240,240))
-    movie = QtGui.QMovie("./1.gif")
+    myapp.ui.screen.setPixmap(QtGui.QPixmap("./screen.jpg").scaled(240,240))
+    movie = QtGui.QMovie("./loading.gif")
     myapp.ui.screen.setMovie(movie)
     movie.start()
     app.exec_()
